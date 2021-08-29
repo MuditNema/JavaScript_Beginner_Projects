@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Completely Validating a Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sub-container">
+            <div class="heading">Form Validation</div>
+            <form action="" id="form" name="MyForm" onsubmit="return CheckValidation()" method="GET">
+
+
+                <div class="fname elem">
+                    <label for="fname">First Name</label>
+                    <input id="fname" type="text" placeholder="Enter your First Name" required>
+                    <p id="error-fname"></p>
+                </div>
+
+
+            
+                <div class="lname elem">
+                    <label for="lname">Last Name</label>
+                    <input id="lname" type="text" placeholder="Enter your Last Name" required>
+                    <p id="error-lname"></p>
+                </div>
+
+
+
+                <div class="mobile elem">
+                    <label for="mob">Mobile Number</label>
+                    <input id="mob" type="text" placeholder="Enter your Mobile Number" required>
+                    <p id="error-mob"></p>
+                </div>
+
+
+
+                <div class="email elem">
+                    <label for="email">E-Mail</label>
+                    <input id="email" type="email" placeholder="Enter your E-Mail" required>
+                </div>
+
+
+
+
+                <div class="pass elem">
+                    <label for="pass">Password</label>
+                    <input id="pass" type="password" placeholder="Enter your password" required>
+                    <p id="error-pass"></p>
+                </div>
+
+
+                <div class="submit-btn">
+                    <input id="submit-btn" type="submit" value="Submit">
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <script src="demo.js"></script>
+</body>
+</html>
