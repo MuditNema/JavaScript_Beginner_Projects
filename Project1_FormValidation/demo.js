@@ -9,12 +9,14 @@ function CheckValidation(){
     let lname = document.getElementById('lname').value;
     let mob = document.getElementById('mob').value;
     let pass = document.getElementById('pass').value;
+    let email = document.getElementById('email').value;
     document.getElementById('error-fname').innerHTML=""
     document.getElementById('error-lname').innerHTML=""
     document.getElementById('error-mob').innerHTML = ""
     document.getElementById('error-pass').innerHTML = ""
+    document.getElementById('error-email').innerHTML = ""
     let res=false;
-    let count=4;
+    let count=5;
     if(num.test(fname) || special.test(fname)){
         count--;
         document.getElementById('error-fname').innerHTML = "*Use only Alphabets"
@@ -27,11 +29,15 @@ function CheckValidation(){
         count--;
         document.getElementById('error-mob').innerHTML = "*Must be 10 digit Number"
     }
+    if(!email.includes('@') || !email.endsWith('.com' || !email.endsWith('.in'))){
+        count--;
+        document.getElementById('error-email').innerHTML = "*Must be in correct format"
+    }
     if(!(cap.test(pass) && sml.test(pass) && special.test(pass) && num.test(pass) && pass.length > 8)){
         count--;
         document.getElementById('error-pass').innerHTML = "*Use Uppercase,lowercase,symbol and numbers. Must be greater than 8 characters"
     }
-    if(count !== 4){
+    if(count !== 5){
         res=false;
     }
     else{
