@@ -17,11 +17,11 @@ function CheckValidation(){
     let count=4;
     if(num.test(fname) || special.test(fname)){
         count--;
-        document.getElementById('error-fname').innerHTML = "*Use only Aphabets"
+        document.getElementById('error-fname').innerHTML = "*Use only Alphabets"
     }
     if(num.test(lname) || special.test(lname)){
         count--;
-        document.getElementById('error-lname').innerHTML = "*Use only Aphabets"
+        document.getElementById('error-lname').innerHTML = "*Use only Alphabets"
     }
     if(cap.test(mob) || sml.test(mob) || special.test(mob)  || mob.length!==10){
         count--;
