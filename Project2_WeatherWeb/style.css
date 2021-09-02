@@ -97,16 +97,14 @@ body{
 #description , #wind-speed{
     background-color: #daebe2;
     font-size: 2.2vw;
+    border-radius: 3vw;
 }
 #city{
     background-color: #8eb6b3;
     color: white;
     border-radius: 5vw;
 }
-#wind-speed{
-    border-bottom-left-radius: 0.8vw;
-    border-bottom-right-radius: 0.8vw;
-}
+
 #description-image{
     height: 4vw;
     width: 4vw;
@@ -161,4 +159,60 @@ body{
 .temp{
     display: flex;
     align-items: center;
+}
+
+
+/* adding responsive details */
+@media (max-width : 600px){
+    /* changing the navbar */
+    .nav-bar{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .web-name h2{
+        font-size:8vw;
+    }
+    .search input{
+        font-size: 4vw;
+        padding-left: 2vw;
+    }
+    .search img{
+        width: 4vw;
+        height: 4vw;
+    }
+    
+    .sub-container{
+        flex-direction: column;
+        height: 80vw;
+    }
+    .elem{
+        width: 80%;
+    }
+    .forecast-item p,#city{
+        font-size: 4vw;
+    }
+    .dets,#description-span,#wind-speed{
+        font-size: 3vw;
+    }
+    #city{
+        grid-area: city;
+    }
+    #temperature{
+        grid-area: temp;
+    }
+    #description{
+        grid-area: desc;
+    }
+    #wind-speed{
+        grid-area: ws;
+    }
+    .current{
+        /* grid-template-columns: repeat(2,auto);
+        grid-template-rows: repeat(2,auto); */
+        grid-template-areas: 
+        'city desc'
+        'temp ws';
+        grid-template-rows: 1fr 1fr ;
+    }
 }
