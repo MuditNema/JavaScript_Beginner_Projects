@@ -25,7 +25,7 @@ function ShowCity() {
                 console.log(res);
                 let cl = document.getElementsByClassName('temp');
                 let cl1 = document.getElementsByClassName('date');
-                let arr = [9,17,25,33];
+                let arr = [8,16,24,32];
                 for(i=0;i<4;i++){
                     cl[i].innerHTML = ` <span> ${(res.list[arr[i]].main.temp - 273.15).toFixed(2)} &deg;C </span> <img style="height:4vw;width:4vw" src="//openweathermap.org/img/w/${res.list[arr[i]].weather[0].icon}.png">`;
                 }
@@ -39,7 +39,7 @@ function ShowCity() {
         }
     }
     
-    // forecast-indices -> 9,17,25
+    // forecast-indices -> 8,16,24,32
 
 
 }
